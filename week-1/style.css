@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+  padding-bottom: 16px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.hero-image {
+  width: 300px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: blue;
+}
+
+a:active {
+  color: red;
+}
+
+a:visited {
+  color: purple;
+}
