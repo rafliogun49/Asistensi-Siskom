@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  /* ini cara menggunakan gambar sebagai background */
+  background: url("background.png");
+  background-size: cover;
+  background-position: top center;
+}
+
+/* setup start */
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+/* setup end */
+
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+  padding: 0 0 16px 0; /* urutannya itu atas, kanan, bawah, kiri */
+}
+
+p {
+  font-size: 20px;
+}
+
+.hero-image {
+  width: 300px; /* usahakan hanya atur satu dimensinya saja. di kasus ini saya hanya ingin mengatur lebarnya */
+}
+
+a {
+  text-decoration: none; /* ini untuk menghilangkan garis bawah pada link */
+  color: #000;
+}
+
+a:hover /* hover = cursor ada di atas elemen */ {
+  color: #3a3a3a;
+}
+
+a:active /* active = cursor kita ngeklik elemen */ {
+  color: grey;
+}
+
+a:visited /* visited = ketika link itu udah pernah dibuka */ {
+  color: #000;
+}
+
+.hero {
+  min-height: 100vh; /* vh itu kepanjangannya view height. 100vh itu sama dengan 100% tinggi layar. Nah di sini tu kita pengen bikin section hero yang tinggi minimalnya itu 100% dari layar  */
+  display: flex; /* ini mau ngaktifin flexbox */
+  align-items: center; /* align items itu fungsinya buat ngatur komponen secara vertikal (atas-bawah). Di sini kita pengen ngatur komponen anaknya (hero-section) buat ada di tengah secara vertikal */
+  padding: 24px 48px 24px 48px;
+  flex-wrap: wrap; /* ini fungsinya biar kalo ada komponen yang lebarnya kelebihan dari layar itu langsung dikebawahin */
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between; /* justify-content itu buat ngatur komponen secara horizontal. Di sini kita pengen ngatur komponen anaknya (hero-content sama hero-img) buat dipisah */
+  align-items: center; /* ini biar komponen anaknya ada di tengah-tengah */
+  flex-wrap: wrap;
+  width: 100%; /* kita pengen section ini lebarnya 100%  */
+}
+.hero-content {
+  max-width: 45%; /* kita pengen lebar maksimal dari hero-content ini 45% dari layar */
+}
+
+.hero-buttons {
+  margin-top: 16px;
+}
+
+.hero-cta {
+  background: grey; /* mewarnai background button */
+  border: none; /* menghilangkan garis pinggir / border dari button */
+  padding: 12px 16px 12px 16px;
+  border-radius: 200px; /* border-radius itu fungsinya bisa bikin komponen kita jadi melengkung / rounded. kalo pengen sedikit melengkung bisa pake 4px - 20px, tapi kalo pengen melengkung banget bisa di atas 100px */
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-right: 24px;
+  cursor: pointer; /* mengubar cursor jadi pointer (kayak ngeklik gitu) */
+}
+
+/* responsive */
+/* ini untuk membuat website lebih nyaman digunakan di layar yang lebih kecil seperti HP */
+@media screen and (max-width: 750px) /* maksud kode ini adalah ketika layar lebih kecil dari 750px maka kode yang dibawah ini akan dijalankan */ {
+  .hero {
+    padding: 12px 16px 12px 16px; /* ketika layarnya kecil, kita ingin padding heronya menjadi lebih kecil juga */
+  }
+  .hero-content {
+    max-width: 100%; /* kita ingin mengubah agar hero-content ini memiliki lebar 100% sehingga gambarnya nanti akan ada di bawah hero-content */
+    justify-content: center; /* kita memposisikan komponennya ada di tengah */
+    text-align: center; /* kita ingin textnya ada di tengah-tengah */
+  }
+  .hero-img {
+    display: flex; /* kita pake flexbox biar nanti anaknya (gambar) ada di tengah */
+    width: 100%; /* mengatur agar wadah untuk gambar ini lebarnya 100% */
+    justify-content: center; /* memposisikan gambar untuk berada di tengah */
+    padding: 24px 0 24px 0; /* memberi jarak atas dan bawah pada gambar */
+  }
+}
